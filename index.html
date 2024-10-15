@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+
+  <!-- Favicon (YouTube Logo) -->
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" type="image/png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <header class="w-full h-16 flex items-center px-4 md:px-8 bg-white border-b shadow-sm">
+    <div class="flex items-center space-x-4">
+      <!-- Hamburger Icon (Visible on all screen sizes) -->
+      <button class="p-2 rounded-full hover:bg-gray-100"> 
+        <span class="material-icons">menu</span>
+      </button>
+
+      <!-- YouTube Logo -->
+      <a href="#" class="flex items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" 
+             class="h-5" alt="YouTube Logo">
+      </a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="flex-1 mx-4 flex items-center justify-center">
+      <div class="relative w-full max-w-md">
+        <input type="text" placeholder="Search"
+               class="w-full border rounded-full px-4 py-2 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <!-- Search Icon with Right Rounded Corners -->
+        <button class="absolute right-0 top-0 h-full bg-gray-100 p-2 rounded-r-full hover:bg-gray-200">
+          <span class="material-icons text-gray-600">search</span>
+        </button>
+      </div>
+      <button class="p-2 ml-2 rounded-full bg-gray-100 hover:bg-gray-200">
+        <span class="material-icons">mic</span>
+      </button>
+    </div>
+
+    <!-- Right Section: Three Dots Menu + Sign-in Button -->
+    <div class="flex items-center space-x-4">
+      <button class="p-2 rounded-full hover:bg-gray-100">
+        <span class="material-icons">more_vert</span>
+      </button>
+      <button class="flex items-center space-x-2 px-4 py-2 text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white">
+        <span class="material-icons">person</span>
+        <span class="hidden md:block">Sign in</span> <!-- Hidden on mobile -->
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="flex flex-1">
+    <!-- Sidebar -->
+    <aside class="w-16 md:w-64 h-screen bg-white hidden md:flex flex-col items-center p-4 space-y-8">
+      <!-- Sidebar Items: Icon with Text Below (Adjusted Alignment) -->
+      <a href="#" class="text-gray-700 flex flex-col items-center space-y-1 -ml-4">
+        <span class="material-icons">home</span>
+        <span class="text-sm">Home</span>
+      </a>
+      <a href="#" class="text-gray-700 flex flex-col items-center space-y-1 -ml-4">
+        <span class="material-icons">play_arrow</span>
+        <span class="text-sm">Shorts</span>
+      </a>
+      <a href="#" class="text-gray-700 flex flex-col items-center space-y-1 -ml-4">
+        <span class="material-icons">subscriptions</span>
+        <span class="text-sm">Subscriptions</span>
+      </a>
+      <a href="#" class="text-gray-700 flex flex-col items-center space-y-1 -ml-4">
+        <span class="material-icons">person</span>
+        <span class="text-sm">You</span>
+      </a>
+      <a href="#" class="text-gray-700 flex flex-col items-center space-y-1 -ml-4">
+        <span class="material-icons">history</span>
+        <span class="text-sm">History</span>
+      </a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col items-center mt-8">
+      <div class="text-center space-y-2 shadow-lg p-8 rounded-lg w-11/12 md:w-3/4 lg:w-1/2 max-w-lg"> <!-- Adjusted width for responsiveness -->
+        <p class="text-2xl font-semibold">Try searching to get started</p>
+        <p class="text-gray-600">Start watching videos to help us build a feed of videos you'll love.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</body>
+</html>
